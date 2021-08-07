@@ -1,0 +1,19 @@
+include ../../components/menu/menu
+//- include ../../components/logo/logo
+.main
+	.main__container
+		.main__left
+			.main__col--left
+				include ../../components/left-sidebar/left-sidebar
+			.main__col-content
+				.header__content._container
+					ul.header__menu.menu
+						each item in menu
+							li.l-header__menu-item
+								a.l-header__menu-link(href=item.link) #{item.text}
+				.presentation
+					include ../../components/headline/headline
+					include ../../components/watch/watch
+		.main__right
+			.main__col
+				include ../../components/right-sidebar/right-sidebar

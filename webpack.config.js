@@ -9,12 +9,14 @@ module.exports = {
             "jquery": "jquery", 
             "window.jquery": "jquery", 
             "$": "jquery", 
-            "window.$": "jquery" 
+            "window.$": "jquery",
+            "swiper": "swiper"
         }) 
     ],
-    
+
     entry: {
         main: "./src/js/index.js",
+        slider: "./src/js/pages/slider.js"
     },
 
     output: {
