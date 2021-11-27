@@ -1,0 +1,35 @@
+include ../../components/watch/watch
+include ../../components/popup/popup
+
+//- include ../../components/logo/logo
+- const cards = [{img: "img/svg/pizza/svg/023-pizza-slice-6.svg", text: "watch pizzas"}]
+
+.main
+	.main__container
+		.main__logo.main__bg.col-lg-1
+			include ../../components/left-sidebar/left-sidebar
+		.main__left.col-lg-6.main__bg
+			include ../../components/header/header
+			.main__content
+				.presentation
+					include ../../components/headline/headline
+					each item in cards
+						+watch(item.img, item.text)
+						.d-flex
+							.playd
+								a.video-open.playbtn(href='../../../videos/trailer.mp4' tabindex='0')
+									img(inline src=`${item.img}`)
+									.video-main__circle
+							p.w-trailor WATCH STREAMIT TRAILER
+		.main__right.col-lg-4
+			//- .swiper__wrapper
+			include ../../components/swiper/swiper
+		.main__sidebar.col-lg-1
+			//- article.main__col
+			include ../../components/right-sidebar/right-sidebar
+		.popup.popup_video-main
+			.popup__close
+			.main-video
+				video.main-video__link(controls='' src='../../../videos/trailer.mp4')
+		+popup__video()
+		+mobile-popup()

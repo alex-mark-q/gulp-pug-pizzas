@@ -1,0 +1,50 @@
+.popup_video-main {
+  padding: 0;
+  opacity: 0;
+}
+.popup {
+  -webkit-overflow-scrolling: touch;
+  z-index: 100;
+  padding: 30px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: visibility .8s ease 0s;
+  -o-transition: visibility .8s ease 0s;
+  transition: visibility .8s ease 0s;
+  visibility: hidden;
+
+  &__close {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 30;
+    background: url(../img/icons/close.svg) 0 0 no-repeat;
+  }
+}
+.popup::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity .8s ease 0s;
+  -o-transition: opacity .8s ease 0s;
+  transition: opacity .8s ease 0s;
+}
+.main-video__link {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+}

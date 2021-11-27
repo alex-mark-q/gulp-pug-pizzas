@@ -1,0 +1,9 @@
+include ../../components/menu/menu
+include ../../components/mobile/mobile
+
+.header__content
+	+mobile()
+	ul.header__menu.menu
+		each item in menu
+			li.header__menu-item
+				a.header__menu-link.gray__link-color(href=item.link) #{item.text}

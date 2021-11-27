@@ -1,0 +1,33 @@
+.pizza {
+	width: 450px;
+	&__ingredients {
+		display: flex;
+		justify-content: center;
+		width: inherit;
+	}
+	&__cost {
+		display: flex;
+    justify-content: center
+	}
+	&__element {
+		flex-wrap: wrap;
+    justify-content: center;
+		color: #000;
+    display: flex;
+    text-align: center;
+    min-height: 550px;
+    align-items: center;
+	}
+	&__header h4 {
+		text-transform: uppercase;
+		font-family: 'GillSansCondC';
+	}
+	&__description {
+		font-family: 'GillSansLightC';
+    font-weight: normal;
+    font-style: normal;
+	}
+	&__topic img {
+		width: 300px;
+	}
+}

@@ -1,0 +1,40 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const attributes = {};
+	- attributes.main = 'main';
+	- attributes.pizza = 'pizza';
+	- attributes.panel = 'panel';
+	- attributes.ingredients = 'ingredients';
+	
+block content
+	div(class=`${attributes.main}`)
+		div(class=`${attributes.main}__container`)
+			div(class=`${attributes.main}__logo col-lg-1`)
+				include ../../blocks/components/left-sidebar/left-sidebar
+			div(class=`${attributes.main}__content col-lg-10`)
+				.header__content
+					include ../../blocks/components/menu/menu
+						ul.header__menu.menu
+							each item in menu
+								li.l-header__menu-item
+									a.l-header__menu-link.gray__link-color(href=item.link) #{item.text}
+				// include ../../blocks/components/panel/panel
+					// +panel__ingredients
+				div(class=`${attributes.panel}__ingredients`)
+					.header__content
+						span pizzas
+						div(class=`${attributes.ingredients}__button`)
+							button ingredients
+						div(class=`${attributes.ingredients}__elements`)
+							include ../../blocks/components/ingredients/ingredients_pizza.pug
+								ul.header__menu.ingredients_pizza
+									each item in ingredients_pizza
+										li.ingredients__menu-item.ingredients__close
+											a.ingredients__menu-link(href=item.link)
+												img(src=item.src)
+				div(class=`${attributes.main}__pizzas`)
+					include ../../blocks/components/pizza/pizza
+			div(class=`${attributes.main}__sidebar`).col-lg-1
+				include ../../blocks/components/right-sidebar/right-sidebar

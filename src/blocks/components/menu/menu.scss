@@ -1,0 +1,18 @@
+.menu li {
+	list-style: none;
+	text-transform: uppercase;
+	color: #3f485f;
+	font-size: 15px;
+	font-weight: 700;
+	-webkit-transition: color .3s ease 0s;
+	-o-transition: color .3s ease 0s;
+	transition: color .3s ease 0s;
+}
+.l-header__menu-link {
+	letter-spacing: 0.1rem;
+	color: #ffffff;
+	font-family: 'GillSansLightC'; 
+	font-weight: bold; 
+	font-style: normal;
+	text-decoration: none
+}

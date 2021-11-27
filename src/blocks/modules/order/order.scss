@@ -1,0 +1,12 @@
+.order {
+	&__hero {
+		z-index: 9;
+	}
+	&__bg {
+		background-color: #F5F5F5;
+	}
+}
+
+.gray__link-color {
+	color: $gray
+}

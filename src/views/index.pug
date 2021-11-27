@@ -1,0 +1,15 @@
+extends layouts/default
+include helpers/mixins
+
+
+block variables
+	- const title = "gulp-pug-starter"
+
+block content
+	include ../blocks/modules/main/main
+
+block scripts
+	// script(src='js/slider.js')
+	script(src="js/main.js")
+	link(src="styles/index.css")
+	// script(src="js/swiper.js")

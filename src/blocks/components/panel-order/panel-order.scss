@@ -1,0 +1,113 @@
+.panel {
+	display: flex;
+	flex-direction: column;
+	padding: 10rem 4rem 2rem;
+	&__hero {
+		display: flex;
+	}
+	&__slider--img, &__description, &__arrow {
+		display: flex;
+	}
+	&__slider--img {
+		flex: 0 1 30%;
+	}
+	&__slider--img img {
+		width: 150px;
+		height: 150px;
+	}
+	&__top {
+		display: flex;
+		flex-direction: column
+	}
+	&__popular {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include size(4);
+		height: 20rem;
+	}
+	&__wrapper {
+		display: flex;
+	}
+	&__down {
+		display: flex;
+		padding: 8rem 0rem 5rem 0rem;
+		@include shift-left(2);
+	}
+	&__cart {
+		display: flex;
+		position: absolute;
+		bottom: 0;
+		justify-content: space-between;
+		align-items: center;
+		line-height: 120px;
+		width: 450px;
+	}
+	&__slider {
+		display: flex;
+		width: 500px
+	}
+	&__description {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 0 1 50%;
+	}
+	&__arrow {
+		display: flex;
+	  align-items: center;
+	  flex: 0 1 5%;
+	}
+}
+.popular__menu {
+	display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 20rem;
+}
+.popular__menu-link svg {
+	width: 25px;
+	height: 25px;
+}
+.cost__menu {
+	display: flex;
+}
+.header__title {
+	font-family: 'GillSansCondC';
+    font-size: 24px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.header__subtitle {
+	font-family: 'GillSansC';
+	color: #767676;
+}
+
+
+.hero__right {
+	position: relative;
+}
+
+.header__mini {
+	font-family: 'GillSansLightC';
+    color: #767676;	
+    font-size: 14px
+}
+
+.info {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    flex: 0 0 50%;
+}
+.pizza__title {
+	line-height: 35px;
+}
+.l-cost__menu-item {
+	font-family: 'GillSansC';
+}
+.l-cost__menu-item:not(:last-child) {
+	margin-right: 25px;
+}

@@ -1,0 +1,54 @@
+include ../watch/watch
+- var attributes = {};
+- attributes.panel = 'panel';
+- attributes.title = 'title';
+- attributes.hero = 'hero';
+- attributes.pizza = 'pizza';
+- const cart = [{img: "img/svg/pizza/svg/023-pizza-slice-6.svg", text: "add to cart"}];
+- const info = [{img: "img/png/shopping-list.png", text: "more info", color: true}];
+
+include ../menu-cost/menu-cost
+div(class=`${attributes.panel}`)
+	div(class=`${attributes.panel}__hero`)
+		div(class=`${attributes.panel}__popular`)
+			ul.popular__menu.menu
+					li.popular__menu-item
+						span.popular__menu-link
+							//- img(src="img/png/vegatables/product-1-600x500.png")
+							include svg/star.svg
+					li.popular__menu-item
+						span.popular__menu-link
+							include svg/salad.svg
+					li.popular__menu-item
+						span.popular__menu-link
+							include svg/vegetables.svg
+		div(class=`${attributes.hero}__right`)
+			div(class=`${attributes.panel}__wrapper`)
+				.header
+					h2(class=`header__${attributes.title}`) turkey bacon swiss with guacamole
+					p(class=`header__subtitle`) combine 1 cup flour, undisolved yeast, sugar and salt in large bowl. Add very warm and oil.
+			div(class=`${attributes.panel}__cost`)
+				ul.cost__menu.menu
+					each item in menu_cost
+						li.l-cost__menu-item
+							a.l-cost__menu-link(href=item.link) #{item.text}
+							span #{item.sale}
+			div(class=`${attributes.panel}__cart`)
+				.cart
+					each item in cart
+						+watch(item.img, item.text)
+				.info
+					each item in info
+						+watch(item.img, item.text, item.color)
+	div(class=`${attributes.panel}__down`)
+		div(class=`${attributes.panel}__slider`)
+			div(class=`${attributes.panel}__slider--img`)
+				img(src="img/png/400x400/product-img-1.png")
+			div(class=`${attributes.panel}__description`)
+				div(class=`${attributes.pizza}__title`)
+					.header
+						h6.header__mini Next one
+					.header
+						h2(class=`header__${attributes.title}`) cheesy cheese pizza
+			div(class=`${attributes.panel}__arrow`)
+				include ../arrow/arrow

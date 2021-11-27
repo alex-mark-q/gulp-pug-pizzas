@@ -1,0 +1,86 @@
+body, html {
+  height: 100%;
+  min-width: 320px;
+}
+h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+  padding: 0;
+}
+$breakpoints: (
+  'xsmall': 320px,
+  'extra':  480px,
+  'small':  768px,
+  'medium': 992px,
+  'large':  1300px,
+  'mlarge':  1400px,
+  'xlarge':  1500px
+) !default;
+ul {
+  list-style-type: none;
+}
+.main__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  @include sm(min-width, rem(510));
+  @include row-flex();
+  // @include md(max-width, rem(690));
+  // @include lg(max-width, rem(930));
+  // @include xl(max-width, rem(1980));
+}
+.panel__bg {
+  background-color: #ffffff !important;
+}
+.main__pizzas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col-lg-12 {
+  flex: 0 0 auto;
+  @include size(12);
+}
+.col-lg-11 {
+  flex: 0 0 auto;
+  @include size(11);
+}
+.col-lg-10 {
+  flex: 0 0 auto;
+  @include size(10);
+}
+.col-lg-9 {
+  flex: 0 0 auto;
+  @include size(9);
+}
+.col-lg-8 {
+  flex: 0 0 auto;
+  @include size(8);
+}
+.col-lg-7 {
+  flex: 0 0 auto;
+  @include size(7);
+}
+.col-lg-6 {
+  flex: 0 0 50%;
+  @include size(6);
+}
+.col-lg-5 {
+  flex: 0 0 auto;
+  @include size(5);
+}
+.col-lg-4 {
+  flex: 0 0 33.33333%;
+  @include size(4);
+}
+.col-lg-3 {
+  flex: 0 0 auto;
+  @include size(3);
+}
+.col-lg-2 {
+  flex: 0 0 16.66667%;
+  @include size(2);
+}
+.col-lg-1 {
+  flex: 0 0 8.33333%;
+  @include size(1);
+}
+

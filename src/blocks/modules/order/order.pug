@@ -1,0 +1,19 @@
+include ../../components/menu/menu
+include ../variables.pug
+//- include ../../components/logo/logo
+
+.main__logo.order__bg.col-lg-1
+	include ../../components/left-sidebar/left-sidebar
+.main__left.col-lg-5.order__bg 
+	.main__content
+		.header__content._container
+			ul.header__menu.menu
+				each item in menu
+					li.l-header__menu-item
+						a.l-header__menu-link.gray__link-color(href=item.link) #{item.text}
+		.order__hero
+			include ../../components/hero/hero
+.main__right.col-lg-5.panel__bg
+	include ../../components/panel-order/panel-order
+.main__sidebar.col-lg-1
+	include ../../components/right-sidebar/right-sidebar

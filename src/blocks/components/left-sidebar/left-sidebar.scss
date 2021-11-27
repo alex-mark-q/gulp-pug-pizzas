@@ -1,0 +1,61 @@
+.left__col {
+	height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-start;
+}
+.left__col--wrapper {
+    position: absolute;
+    width: 200px;
+    bottom: 50%;
+    display: flex;
+    margin: 0 auto;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+.tel {
+    display: flex;
+    flex: 0 0 30%;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.tel span {
+    text-align: right;
+    margin-right: 15px;
+    color: $white;
+    font-family: 'GillSansC'; 
+    font-weight: normal; 
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 13px;
+    width: 100%;
+}
+.tel a {
+    font-size: 14px;
+    color: $white;
+    font-family: 'GillSansC'; 
+    font-weight: bold; 
+    font-style: normal;
+    width: 100%;
+    text-decoration: none;
+}
+.logo {
+    height: 175px;
+    line-height: 175px;
+    flex: 0 0 70%;
+}
+.tel__gray {
+    color: $gray !important;
+}
+.tel__black {
+    color: #000 !important;
+}

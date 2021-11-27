@@ -1,0 +1,81 @@
+.cart {
+  display: flex;
+      justify-content: center;
+    align-items: center;
+    flex: 0 0 50%;
+}
+.sidebar__cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  line-height: 100px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 56px;
+  flex: 0 0 56px;
+  height: 56px;
+  border: 1px solid rgba(255,255,255,.15);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 20px;
+  position: relative;
+  -webkit-transition: background-color .3s ease 0s;
+  -o-transition: background-color .3s ease 0s;
+  transition: background-color .3s ease 0s;
+  cursor: pointer;
+}
+.sidebar__cart--count {
+  background: #E53934;
+  position: absolute;
+  z-index: 2;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  height: 17px;
+  width: 17px;
+  font-size: .70rem;
+  right: 0;
+  border-radius: 50%;
+  font-weight: 900;
+  line-height: 155%;
+  text-align: center;
+  color: #fff;
+}
+.button__cart {
+  display: flex;
+}
+.button__cart svg {
+  width: 35px;
+  height: 35px
+}
+.sidebar__cart span {
+  text-transform: uppercase;
+  font-family: 'GillSansLightC';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sidebar__cart--text {
+  display: flex;
+    transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+.sidebar__cart--wrapper {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+.sidebar__scroll span {
+  text-transform: capitalize;
+  font-family: 'GillSansLightC';
+  font-weight: normal;
+  font-style: normal;
+  display: block;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}

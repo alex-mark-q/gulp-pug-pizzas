@@ -1,0 +1,27 @@
+.headline {
+	flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.headline__wrapper {
+	font-family: 'GillSansCondC'; 
+	font-weight: bold; 
+	font-style: normal;
+}
+.headline__wrapper span {
+	text-transform: uppercase;
+	@include media('large') {
+    font-size: 120px;
+  }
+	@include media('medium') {
+    font-size: 100px;
+  }
+}
+.headline__wrapper p {
+	font-family: 'GillSansLightC'; 
+	font-weight: normal; 
+	font-style: normal;
+}
+

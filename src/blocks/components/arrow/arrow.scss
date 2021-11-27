@@ -1,0 +1,23 @@
+.arrow__right {
+	display: flex;
+	align-items: center;
+	position: relative;
+  padding: 5px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.arrow__right::after {
+  content: "";
+  position: relative;
+  z-index: 11;
+  display: block;
+  width: 55px;
+  height: 55px;
+  border-top: 2px solid #767676;
+  border-left: 2px solid #767676;
+}
+.arrow__right::after {
+  transform: rotate(135deg);
+}

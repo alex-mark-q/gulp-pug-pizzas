@@ -1,0 +1,24 @@
+include ../menu-cost/menu-cost
+include ./pizza__item.pug
+block content
+	each item in pizza__item
+		div(class=`${attributes.pizza}__element pizza`)
+			div(class=`${attributes.pizza}__topic`)
+				img(src=item.img)
+			div(class=`${attributes.pizza}__ingredients`)
+				include ../ingredients/ingredients
+					ul.header__menu.ingredients
+						each item in ingredients
+							li.ingredients__menu-item
+								a.ingredients__menu-link.gray__link-color(href=item.link)
+									img(src=item.src)
+			div(class=`${attributes.pizza}__header`)
+				h4 #{item.title}
+			div(class=`${attributes.pizza}__description`)
+				span Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+			div(class=`${attributes.pizza}__cost`)
+				ul.cost__menu.menu
+					each item in menu_cost
+						li.l-cost__menu-item
+							a.l-cost__menu-link(href=item.link) #{item.text}
+							span #{item.sale}
