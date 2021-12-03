@@ -1,15 +1,15 @@
 .cart {
   display: flex;
-      justify-content: center;
-    align-items: center;
-    flex: 0 0 50%;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 50%;
 }
 .sidebar__cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  line-height: 100px;
+  line-height: 178px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -18,8 +18,6 @@
   align-items: center;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 56px;
-  flex: 0 0 56px;
-  height: 56px;
   border: 1px solid rgba(255,255,255,.15);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -49,6 +47,8 @@
 }
 .button__cart {
   display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 .button__cart svg {
   width: 35px;
@@ -63,7 +63,7 @@
 
 .sidebar__cart--text {
   display: flex;
-    transform: rotate(-90deg);
+  transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
 }
 .sidebar__cart--wrapper {
@@ -78,4 +78,60 @@
   display: block;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
+}
+
+.cart {
+  &__popup {
+    z-index: 100001;
+    transition: all 0.2s ease-in-out;
+
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+  }
+  &__overlay-close {
+    z-index: 9997;
+    visibility: hidden;
+    width: 100%;
+    opacity: 1;
+  }
+  &__wrapper {
+
+  }
+  &__close {
+    display: none;
+    z-index: 9997;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  &__content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-grow: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0 20px 0;
+  }
+}
+.cart__popup.active {
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  pointer-events: auto;
+}
+.cart__popup.active .cart__wrapper {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
 }

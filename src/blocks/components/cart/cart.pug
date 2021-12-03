@@ -4,8 +4,17 @@
 //- 	//- a(href="#"): img(src="img/svg/cart/svg/004-online-shop.svg")
 //- 	span cart
 
-.sidebar__cart.tab
-	span.button__cart
-		include svg/004-online-shop.svg
-		.sidebar__cart--count 1
-	span.sidebar__cart--text cart
+mixin sidebar__cart()
+	.sidebar__cart.tab
+		span.button__cart
+			include svg/004-online-shop.svg
+			.sidebar__cart--count 1
+		span.sidebar__cart--text cart
+
+mixin cart__popup()
+	.cart__popup
+		.cart__overlay-close
+		.cart__wrapper
+			button.cart__close
+			.cart__content-wrapper
+				.cart__content

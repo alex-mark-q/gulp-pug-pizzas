@@ -86,6 +86,42 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/blocks/components/cart/cart.js":
+/*!********************************************!*\
+  !*** ./src/blocks/components/cart/cart.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var side_wrapper = document.querySelector('.cart__popup');
+var side_content = document.querySelector('.cart__wrapper');
+var open_btn = document.querySelector('.button__cart');
+var close_btn = document.querySelector('.cart__close');
+open_btn.addEventListener('click', openMenu);
+close_btn.addEventListener('click', closeMenu);
+window.addEventListener('click', outsideClick);
+
+function openMenu() {
+  console.log('click');
+  side_wrapper.classList.add('active');
+  side_content.classList.add('slideIn');
+  document.querySelector('body').style.overflow = 'hidden';
+}
+
+function closeMenu() {
+  side_wrapper.classList.remove('active');
+  side_content.classList.remove('slideIn');
+  document.querySelector('body').style.overflow = 'auto';
+}
+
+function outsideClick(e) {
+  if (e.target === side_wrapper) {
+    closeMenu();
+  }
+}
+
+/***/ }),
+
 /***/ "./src/blocks/components/mobile/mobile.js":
 /*!************************************************!*\
   !*** ./src/blocks/components/mobile/mobile.js ***!
@@ -10282,6 +10318,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_watch_watch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_watch_watch__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_mobile_mobile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %components%/mobile/mobile */ "./src/blocks/components/mobile/mobile.js");
 /* harmony import */ var _components_mobile_mobile__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_mobile_mobile__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_cart_cart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %components%/cart/cart */ "./src/blocks/components/cart/cart.js");
+/* harmony import */ var _components_cart_cart__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_cart_cart__WEBPACK_IMPORTED_MODULE_2__);
+
 
  // import "%components%/swiper/swiper";
 // import "%components%/slider/slider";

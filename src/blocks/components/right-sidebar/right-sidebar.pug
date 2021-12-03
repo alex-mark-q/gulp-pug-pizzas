@@ -1,7 +1,14 @@
-div.sidebar__right
-	include ../cart/cart
-	div.sidebar__headline
-		.sidebar__headline--wrapper
-			span make pizza
-	div.sidebar__scroll
-		span scroll
+include ../cart/cart
+
+.cart__popup
+	.cart__overlay-close
+	.cart__wrapper
+		button.cart__close
+		.cart__content-wrapper
+			.cart__content
+				+sidebar__cart()
+				div.sidebar__headline
+					.sidebar__headline--wrapper
+						span make pizza
+				div.sidebar__scroll
+					span scroll
