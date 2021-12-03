@@ -2451,7 +2451,6 @@ ul {
 .main {
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
 }
